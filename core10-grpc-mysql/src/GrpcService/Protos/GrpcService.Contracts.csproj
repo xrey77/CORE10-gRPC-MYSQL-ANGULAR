@@ -1,0 +1,5 @@
+<ItemGroup>
+  <Protobuf Include="Protos\*.proto" GrpcServices="Both" />
+  <PackageReference Include="Grpc.Tools" Version="2.*" PrivateAssets="All" />
+  <PackageReference Include="Google.Protobuf" Version="3.*" />
+</ItemGroup>

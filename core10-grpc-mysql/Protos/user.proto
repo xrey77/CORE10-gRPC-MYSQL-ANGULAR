@@ -1,0 +1,40 @@
+syntax = "proto3";
+
+import "google/protobuf/wrappers.proto";
+
+option csharp_namespace = "core10_grpc_mysql"; 
+
+package user;
+
+service GetUser {
+  rpc GetUserById (GetUserRequest) returns (GetUserResponse);
+  rpc GetAllUsers (GetAllUsersRequest) returns (GetAllUsersResponse);
+}
+
+message UserData {
+  int32 id = 1;
+  string firstname = 2;
+  string lastname = 3;
+  string email = 4;
+  string mobile = 5;
+  string username = 6;
+  int32 isactived = 7;
+  int32 isblocked = 8;
+  int32 mailtoken = 9;
+  string userpicture = 10;
+  google.protobuf.StringValue qrcodeurl = 11;
+}
+
+message GetUserRequest {
+  int32 id = 1;
+}
+
+message GetUserResponse {
+  UserData data = 1;
+}
+
+message GetAllUsersRequest {}
+
+message GetAllUsersResponse {
+  repeated UserData data = 1;
+}

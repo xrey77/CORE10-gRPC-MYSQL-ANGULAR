@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+import "google/protobuf/wrappers.proto";
+
+option csharp_namespace = "core10_grpc_mysql"; 
+
+package login;
+
+service Login {
+  rpc UserLogin (LoginRequest) returns (LoginResponse);
+}
+
+message LoginRequest {
+  string username = 1;
+  string password = 2;
+}
+
+message LoginResponse {
+  int32 id = 1;
+  string firstname = 2;
+  string lastname = 3;
+  string email = 4;
+  string mobile = 5;
+  string username = 6;
+  int32 isactivated = 7;
+  int32 isblocked = 8;
+  int32 mailtoken = 9;
+  string userpicture = 10;
+  google.protobuf.StringValue qrcodeurl = 11;
+  string roles = 12;
+  string token = 13;
+  string text_content = 14;
+}
