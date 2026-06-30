@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package fileupload;
+
+service FileUploadService {
+  rpc UploadImage (stream UploadImageRequest) returns (UploadImageResponse);
+}
+
+message UploadImageRequest {
+  string id = 1;
+  string file_name = 2;
+  bytes chunk_data = 3;
+}
+
+message UploadImageResponse {
+  bool success = 1;
+  string message = 2;
+  string file_url = 3;
+}

@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+option csharp_namespace = "core10_grpc_mysql"; 
+
+package mfa;
+
+service Mfa {
+  rpc ActivateMfa (MfaActivationRequest) returns (MfaActivationResponse);
+  rpc VerifyTotp (MfaVerificationRequest) returns (MfaVerificationResponse);
+}
+
+message MfaActivationRequest {
+  int32 id = 1;
+  bool twofactorenabled = 2;
+}
+
+message MfaActivationResponse {
+  optional string qrcodeurl = 1;
+  string text_content = 2;
+}
+
+
+message MfaVerificationRequest {
+    int32 id = 1;
+    string otp = 2;
+}
+
+message MfaVerificationResponse {
+    string username = 1;
+    string text_content = 2;
+}

@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+option csharp_namespace = "core10_grpc_mysql"; 
+
+package product;
+
+
+service Product {
+  rpc ProductList (ProductListRequest) returns (ProductListResponse);
+  rpc ProductSearch (ProductSearchRequest) returns (ProductSearchResponse);
+}
+
+message ProductData {
+  int32 id = 1;
+  string descriptions = 2;
+  int32 qty = 3;
+  string unit = 4;
+  double costprice = 5;
+  double sellprice = 6;
+}
+
+message ProductListRequest {
+  int32 page = 1;
+}
+
+message ProductListResponse {
+    repeated ProductData data = 1;
+}
+
+
+message ProductSearchRequest {
+    int32 page = 1;
+    string keyword = 2;
+}
+
+message ProductSearchResponse {
+    repeated ProductData data = 1;
+}

@@ -4,9 +4,11 @@ using Dapper;
 using Grpc.Core;
 using System.Text;
 using System.Security.Claims; 
+using Microsoft.AspNetCore.Authorization;
 
 namespace core10_grpc_mysql.Services;
 
+ [Authorize] 
 public class UserService(ILogger<UserService> logger, IDbConnection dbConnection) : GetUser.GetUserBase
 {
     public override async Task<GetUserResponse> GetUserById(GetUserRequest request, ServerCallContext context)
@@ -18,8 +20,13 @@ public class UserService(ILogger<UserService> logger, IDbConnection dbConnection
 
         if (user != null)
         {
+            string qrcode = "";
+            if (user.Qrcodeurl != null)
+            {
+                qrcode = user.Qrcodeurl;
+            }
 
-            var response = new GetUserResponse
+            return new GetUserResponse
             {
                 Data = new UserData
                 {
@@ -33,10 +40,9 @@ public class UserService(ILogger<UserService> logger, IDbConnection dbConnection
                     Isblocked = user.Isblocked,
                     Mailtoken = user.Mailtoken,
                     Userpicture = user.Userpicture,
-                    Qrcodeurl = user.Qrcodeurl ?? null 
+                    Qrcodeurl = qrcode 
                 }
             };
-            return response;
         }
         else
         {
@@ -74,11 +80,10 @@ public class UserService(ILogger<UserService> logger, IDbConnection dbConnection
                     Isblocked = user.Isblocked,
                     Mailtoken = user.Mailtoken,
                     Userpicture = user.Userpicture ?? string.Empty,
-                    Qrcodeurl = user.Qrcodeurl ?? null
+                    Qrcodeurl = user.Qrcodeurl ?? string.Empty
                 });
             }
 
-            // Populate the repeated field using AddRange
             response.Data.AddRange(userList);
         }
 
@@ -86,5 +91,53 @@ public class UserService(ILogger<UserService> logger, IDbConnection dbConnection
 
     }
 
+    public override async Task<ProfileUpdateResponse> UpdateProfile(ProfileUpdateRequest request, ServerCallContext context)
+    {
+        // Check if user exists
+        const string sql = "SELECT COUNT(1) FROM users WHERE id = @Id";
+        var Idno = request.Id;
+        var user = await dbConnection.QueryFirstOrDefaultAsync<dynamic>(sql, new { Id = Idno });
 
+        if (user != null)
+        {
+            var fname = request.Firstname;
+            var lname = request.Lastname;
+            var mobile = request.Mobile;
+
+            // FIX: Added @Id to the parameter object
+            const string updateSql = @" UPDATE users SET firstname = @Fname, lastname = @Lname, mobile = @Mobile WHERE id = @Id";
+            await dbConnection.ExecuteScalarAsync<int>(updateSql, new { Fname = fname, Lname = lname, Mobile = mobile, Id = Idno });
+
+            return new ProfileUpdateResponse { TextContent = "You have changed your profile successfully." };
+        }
+        else
+        {
+            logger.LogError("User ID not found.");
+            throw new RpcException(new Status(StatusCode.NotFound, "User ID not found."));
+        }
+    }
+
+    public override async Task<UpdatePasswordResponse> ChangePassword(UpdatePasswordRequest request, ServerCallContext context)
+    {
+        // Check if user exists
+        const string sql = "SELECT COUNT(1) FROM users WHERE id = @Id";
+        var Idno = request.Id;
+        var user = await dbConnection.QueryFirstOrDefaultAsync<dynamic>(sql, new { Id = Idno });
+
+        if (user != null)
+        {
+            var hashedPassword = BCrypt.Net.BCrypt.HashPassword(request.Password);
+
+            // FIX: Corrected @password to @Pword to match SQL, and added @Id to the parameter object
+            const string updateSql = @" UPDATE users SET password = @Pword WHERE id = @Id";
+            await dbConnection.ExecuteScalarAsync<int>(updateSql, new { Pword = hashedPassword, Id = Idno });
+
+            return new UpdatePasswordResponse { TextContent = "You have changed your password successfully." };
+        }
+        else
+        {
+            logger.LogError("User ID not found.");
+            throw new RpcException(new Status(StatusCode.NotFound, "User ID not found."));
+        }
+    }
 }

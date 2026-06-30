@@ -11,11 +11,17 @@
     <Protobuf Include="Protos\register.proto" GrpcServices="Server" />
     <Protobuf Include="Protos\login.proto" GrpcServices="Server" />
     <Protobuf Include="Protos\user.proto" GrpcServices="Server" />
+    <Protobuf Include="Protos\mfa.proto" GrpcServices="Server" />
+    <Protobuf Include="Protos\file.proto" GrpcServices="Server" />
+    <Protobuf Include="Protos\product.proto" GrpcServices="Server" />
+    <Protobuf Include="Protos\sale.proto" GrpcServices="Server" />
+
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="BCrypt.Net-Next" Version="4.2.0" />
     <PackageReference Include="Dapper" Version="2.1.79" />
+    <PackageReference Include="GoogleAuthenticator" Version="3.2.0" />
     <PackageReference Include="Grpc.AspNetCore" Version="2.64.0" />
     <PackageReference Include="Grpc.AspNetCore.Server.Reflection" Version="2.80.0" />
     <PackageReference Include="MailKit" Version="4.17.0" />

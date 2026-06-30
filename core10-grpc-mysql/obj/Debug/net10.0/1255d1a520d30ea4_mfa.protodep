@@ -1,0 +1,2 @@
+obj/Debug/net10.0/Protos/Mfa.cs \
+obj/Debug/net10.0/Protos/MfaGrpc.cs: Protos/mfa.proto

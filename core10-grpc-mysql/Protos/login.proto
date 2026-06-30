@@ -1,6 +1,5 @@
 syntax = "proto3";
 
-import "google/protobuf/wrappers.proto";
 
 option csharp_namespace = "core10_grpc_mysql"; 
 
@@ -26,7 +25,7 @@ message LoginResponse {
   int32 isblocked = 8;
   int32 mailtoken = 9;
   string userpicture = 10;
-  google.protobuf.StringValue qrcodeurl = 11;
+  optional string qrcodeurl = 11;
   string roles = 12;
   string token = 13;
   string text_content = 14;

@@ -1,16 +1,17 @@
 ﻿{
   "$schema": "https://json.schemastore.org/launchsettings.json",
-  "profiles": {
-    "http": {
-      "commandName": "Project",
-      "dotnetRunMessages": true,
-      "launchBrowser": false,
-      "applicationUrl": "http://localhost:5110",
-      "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
-      }
-    },
-    "https": {
+"profiles": {
+  "http": {
+    "commandName": "Project",
+    "dotnetRunMessages": true,
+    "launchBrowser": true,
+    "applicationUrl": "https://localhost:5110;http://localhost:5110",
+    "environmentVariables": {
+      "ASPNET_Kestrel__Endpoints__Http__Protocols": "Http2",
+      "ASPNETCORE_ENVIRONMENT": "Development"
+    }
+  },
+  "https": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": false,

@@ -49,7 +49,6 @@ public class RegistrationService(ILogger<RegistrationService> logger, IDbConnect
                 throw new RpcException(new Status(StatusCode.AlreadyExists, $"The username '{username}' is already registered."));
             }
 
-            // Proceed to insert the user if the email is unique
             var insertedId = await dbConnection.ExecuteScalarAsync<int>(insertSql, new { 
                 Fname = fname, 
                 Lname = lname, 

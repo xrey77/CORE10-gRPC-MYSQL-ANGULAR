@@ -49,6 +49,11 @@ public class LoginService(ILogger<LoginService> logger, IDbConnection dbConnecti
 
                 var token = tokenHandler.CreateToken(tokenDescriptor);
                 var tokenString = tokenHandler.WriteToken(token);
+                string qrcode = "";
+                if (user.Qrcodeurl != null)
+                {
+                    qrcode = user.Qrcodeurl;
+                } 
 
                 return new LoginResponse 
                 { 
@@ -62,7 +67,7 @@ public class LoginService(ILogger<LoginService> logger, IDbConnection dbConnecti
                     Isblocked = (int)user.Isblocked,
                     Mailtoken = (int)user.Mailtoken,
                     Userpicture = user.Userpicture ?? "",
-                    Qrcodeurl = user.Qrcodeurl ?? null,
+                    Qrcodeurl = qrcode,
                     Roles = roleName,
                     Token = tokenString,
                     TextContent = "You have logged-in successfully, please wait."

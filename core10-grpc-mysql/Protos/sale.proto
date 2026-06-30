@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option csharp_namespace = "core10_grpc_mysql"; 
+
+package sale;
+
+service Sale {
+  rpc SalesList (SalesListRequest) returns (SalesListResponse);
+}
+
+message SalesData {
+  double salesamount = 1;
+  string  salesdate = 2;
+}
+
+message SalesListRequest {}
+message SalesListResponse {
+    repeated SalesData data = 1;
+}
+
