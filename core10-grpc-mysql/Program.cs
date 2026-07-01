@@ -65,6 +65,7 @@ app.MapGrpcService<UserService>();
 app.MapGrpcService<MfaService>();
 app.MapGrpcService<FileUploadService>();
 app.MapGrpcService<ProductService>();
+app.MapGrpcService<SaleService>();
 
 app.MapGrpcReflectionService();
 

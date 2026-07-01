@@ -53,6 +53,14 @@ namespace core10_grpc_mysql {
     static readonly grpc::Marshaller<global::core10_grpc_mysql.ProductSearchRequest> __Marshaller_product_ProductSearchRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::core10_grpc_mysql.ProductSearchRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::core10_grpc_mysql.ProductSearchResponse> __Marshaller_product_ProductSearchResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::core10_grpc_mysql.ProductSearchResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::core10_grpc_mysql.ProductReportRequest> __Marshaller_product_ProductReportRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::core10_grpc_mysql.ProductReportRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::core10_grpc_mysql.ProductReportResponse> __Marshaller_product_ProductReportResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::core10_grpc_mysql.ProductReportResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::core10_grpc_mysql.CategoryRequest> __Marshaller_product_CategoryRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::core10_grpc_mysql.CategoryRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::core10_grpc_mysql.CategoryResponse> __Marshaller_product_CategoryResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::core10_grpc_mysql.CategoryResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::core10_grpc_mysql.ProductListRequest, global::core10_grpc_mysql.ProductListResponse> __Method_ProductList = new grpc::Method<global::core10_grpc_mysql.ProductListRequest, global::core10_grpc_mysql.ProductListResponse>(
@@ -69,6 +77,22 @@ namespace core10_grpc_mysql {
         "ProductSearch",
         __Marshaller_product_ProductSearchRequest,
         __Marshaller_product_ProductSearchResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::core10_grpc_mysql.ProductReportRequest, global::core10_grpc_mysql.ProductReportResponse> __Method_ProductReport = new grpc::Method<global::core10_grpc_mysql.ProductReportRequest, global::core10_grpc_mysql.ProductReportResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ProductReport",
+        __Marshaller_product_ProductReportRequest,
+        __Marshaller_product_ProductReportResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::core10_grpc_mysql.CategoryRequest, global::core10_grpc_mysql.CategoryResponse> __Method_GetCategoryProducts = new grpc::Method<global::core10_grpc_mysql.CategoryRequest, global::core10_grpc_mysql.CategoryResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetCategoryProducts",
+        __Marshaller_product_CategoryRequest,
+        __Marshaller_product_CategoryResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -92,6 +116,18 @@ namespace core10_grpc_mysql {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::core10_grpc_mysql.ProductReportResponse> ProductReport(global::core10_grpc_mysql.ProductReportRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::core10_grpc_mysql.CategoryResponse> GetCategoryProducts(global::core10_grpc_mysql.CategoryRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
     }
 
     /// <summary>Creates service definition that can be registered with a server</summary>
@@ -101,7 +137,9 @@ namespace core10_grpc_mysql {
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_ProductList, serviceImpl.ProductList)
-          .AddMethod(__Method_ProductSearch, serviceImpl.ProductSearch).Build();
+          .AddMethod(__Method_ProductSearch, serviceImpl.ProductSearch)
+          .AddMethod(__Method_ProductReport, serviceImpl.ProductReport)
+          .AddMethod(__Method_GetCategoryProducts, serviceImpl.GetCategoryProducts).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -113,6 +151,8 @@ namespace core10_grpc_mysql {
     {
       serviceBinder.AddMethod(__Method_ProductList, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::core10_grpc_mysql.ProductListRequest, global::core10_grpc_mysql.ProductListResponse>(serviceImpl.ProductList));
       serviceBinder.AddMethod(__Method_ProductSearch, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::core10_grpc_mysql.ProductSearchRequest, global::core10_grpc_mysql.ProductSearchResponse>(serviceImpl.ProductSearch));
+      serviceBinder.AddMethod(__Method_ProductReport, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::core10_grpc_mysql.ProductReportRequest, global::core10_grpc_mysql.ProductReportResponse>(serviceImpl.ProductReport));
+      serviceBinder.AddMethod(__Method_GetCategoryProducts, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::core10_grpc_mysql.CategoryRequest, global::core10_grpc_mysql.CategoryResponse>(serviceImpl.GetCategoryProducts));
     }
 
   }

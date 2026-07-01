@@ -1,6 +1,11 @@
 /home/reynald/My-Programs/Dotnet/CORE10-gRPC-MYSQL-ANGULAR/core10-grpc-mysql/obj/Debug/net10.0/core10-grpc-mysql.csproj.AssemblyReference.cache
 /home/reynald/My-Programs/Dotnet/CORE10-gRPC-MYSQL-ANGULAR/core10-grpc-mysql/obj/Debug/net10.0/rpswa.dswa.cache.json
 /home/reynald/My-Programs/Dotnet/CORE10-gRPC-MYSQL-ANGULAR/core10-grpc-mysql/obj/Debug/net10.0/core10-grpc-mysql.GeneratedMSBuildEditorConfig.editorconfig
+/home/reynald/My-Programs/Dotnet/CORE10-gRPC-MYSQL-ANGULAR/core10-grpc-mysql/obj/Debug/net10.0/core10-grpc-mysql.AssemblyInfoInputs.cache
+/home/reynald/My-Programs/Dotnet/CORE10-gRPC-MYSQL-ANGULAR/core10-grpc-mysql/obj/Debug/net10.0/core10-grpc-mysql.AssemblyInfo.cs
+/home/reynald/My-Programs/Dotnet/CORE10-gRPC-MYSQL-ANGULAR/core10-grpc-mysql/obj/Debug/net10.0/core10-grpc-mysql.csproj.CoreCompileInputs.cache
+/home/reynald/My-Programs/Dotnet/CORE10-gRPC-MYSQL-ANGULAR/core10-grpc-mysql/obj/Debug/net10.0/core10-grpc-mysql.MvcApplicationPartsAssemblyInfo.cache
+/home/reynald/My-Programs/Dotnet/CORE10-gRPC-MYSQL-ANGULAR/core10-grpc-mysql/obj/Debug/net10.0/core10-grpc-mysql.sourcelink.json
 /home/reynald/My-Programs/Dotnet/CORE10-gRPC-MYSQL-ANGULAR/core10-grpc-mysql/bin/Debug/net10.0/appsettings.Development.json
 /home/reynald/My-Programs/Dotnet/CORE10-gRPC-MYSQL-ANGULAR/core10-grpc-mysql/bin/Debug/net10.0/appsettings.json
 /home/reynald/My-Programs/Dotnet/CORE10-gRPC-MYSQL-ANGULAR/core10-grpc-mysql/bin/Debug/net10.0/core10-grpc-mysql.staticwebassets.runtime.json
@@ -13,6 +18,7 @@
 /home/reynald/My-Programs/Dotnet/CORE10-gRPC-MYSQL-ANGULAR/core10-grpc-mysql/bin/Debug/net10.0/BCrypt-Net-Next.dll
 /home/reynald/My-Programs/Dotnet/CORE10-gRPC-MYSQL-ANGULAR/core10-grpc-mysql/bin/Debug/net10.0/BouncyCastle.Cryptography.dll
 /home/reynald/My-Programs/Dotnet/CORE10-gRPC-MYSQL-ANGULAR/core10-grpc-mysql/bin/Debug/net10.0/Dapper.dll
+/home/reynald/My-Programs/Dotnet/CORE10-gRPC-MYSQL-ANGULAR/core10-grpc-mysql/bin/Debug/net10.0/Google.Api.CommonProtos.dll
 /home/reynald/My-Programs/Dotnet/CORE10-gRPC-MYSQL-ANGULAR/core10-grpc-mysql/bin/Debug/net10.0/Google.Protobuf.dll
 /home/reynald/My-Programs/Dotnet/CORE10-gRPC-MYSQL-ANGULAR/core10-grpc-mysql/bin/Debug/net10.0/Google.Authenticator.dll
 /home/reynald/My-Programs/Dotnet/CORE10-gRPC-MYSQL-ANGULAR/core10-grpc-mysql/bin/Debug/net10.0/Grpc.AspNetCore.Server.dll
@@ -55,11 +61,6 @@
 /home/reynald/My-Programs/Dotnet/CORE10-gRPC-MYSQL-ANGULAR/core10-grpc-mysql/bin/Debug/net10.0/runtimes/win-x64/native/krb5_64.dll
 /home/reynald/My-Programs/Dotnet/CORE10-gRPC-MYSQL-ANGULAR/core10-grpc-mysql/bin/Debug/net10.0/runtimes/win-x64/native/krbcc64.dll
 /home/reynald/My-Programs/Dotnet/CORE10-gRPC-MYSQL-ANGULAR/core10-grpc-mysql/bin/Debug/net10.0/runtimes/win/lib/net8.0/System.Windows.Extensions.dll
-/home/reynald/My-Programs/Dotnet/CORE10-gRPC-MYSQL-ANGULAR/core10-grpc-mysql/obj/Debug/net10.0/core10-grpc-mysql.AssemblyInfoInputs.cache
-/home/reynald/My-Programs/Dotnet/CORE10-gRPC-MYSQL-ANGULAR/core10-grpc-mysql/obj/Debug/net10.0/core10-grpc-mysql.AssemblyInfo.cs
-/home/reynald/My-Programs/Dotnet/CORE10-gRPC-MYSQL-ANGULAR/core10-grpc-mysql/obj/Debug/net10.0/core10-grpc-mysql.csproj.CoreCompileInputs.cache
-/home/reynald/My-Programs/Dotnet/CORE10-gRPC-MYSQL-ANGULAR/core10-grpc-mysql/obj/Debug/net10.0/core10-grpc-mysql.MvcApplicationPartsAssemblyInfo.cache
-/home/reynald/My-Programs/Dotnet/CORE10-gRPC-MYSQL-ANGULAR/core10-grpc-mysql/obj/Debug/net10.0/core10-grpc-mysql.sourcelink.json
 /home/reynald/My-Programs/Dotnet/CORE10-gRPC-MYSQL-ANGULAR/core10-grpc-mysql/obj/Debug/net10.0/rjimswa.dswa.cache.json
 /home/reynald/My-Programs/Dotnet/CORE10-gRPC-MYSQL-ANGULAR/core10-grpc-mysql/obj/Debug/net10.0/rjsmrazor.dswa.cache.json
 /home/reynald/My-Programs/Dotnet/CORE10-gRPC-MYSQL-ANGULAR/core10-grpc-mysql/obj/Debug/net10.0/rjsmcshtml.dswa.cache.json

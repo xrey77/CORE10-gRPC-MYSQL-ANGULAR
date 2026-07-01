@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "ZySWTaBTtWk=",
+  "dgSpecHash": "1c4TnBXQmt4=",
   "success": true,
   "projectFilePath": "/home/reynald/My-Programs/Dotnet/CORE10-gRPC-MYSQL-ANGULAR/core10-grpc-mysql/core10-grpc-mysql.csproj",
   "expectedPackageFiles": [
     "/home/reynald/.nuget/packages/bcrypt.net-next/4.2.0/bcrypt.net-next.4.2.0.nupkg.sha512",
     "/home/reynald/.nuget/packages/bouncycastle.cryptography/2.6.2/bouncycastle.cryptography.2.6.2.nupkg.sha512",
     "/home/reynald/.nuget/packages/dapper/2.1.79/dapper.2.1.79.nupkg.sha512",
+    "/home/reynald/.nuget/packages/google.api.commonprotos/2.17.0/google.api.commonprotos.2.17.0.nupkg.sha512",
     "/home/reynald/.nuget/packages/google.protobuf/3.32.0/google.protobuf.3.32.0.nupkg.sha512",
     "/home/reynald/.nuget/packages/googleauthenticator/3.2.0/googleauthenticator.3.2.0.nupkg.sha512",
     "/home/reynald/.nuget/packages/grpc.aspnetcore/2.64.0/grpc.aspnetcore.2.64.0.nupkg.sha512",

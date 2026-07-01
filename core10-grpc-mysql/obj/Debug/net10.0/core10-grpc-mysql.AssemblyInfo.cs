@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("core10-grpc-mysql")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+27566effc40d415428d139b387e2336ff0b303d2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+03f94469179f43c6d4550fbcb1ee7c3d0118132a")]
 [assembly: System.Reflection.AssemblyProductAttribute("core10-grpc-mysql")]
 [assembly: System.Reflection.AssemblyTitleAttribute("core10-grpc-mysql")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
