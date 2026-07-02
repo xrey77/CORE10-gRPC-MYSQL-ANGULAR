@@ -1,0 +1,61 @@
+<div class="fixed inset-0 z-[100] flex items-center justify-center bg-black/50 backdrop-blur-sm">
+  <div class="bg-slate-800 p-8 rounded-lg shadow-xl max-w-md w-full mx-4">
+    <h2 class="text-white text-xl font-bold mb-4">Account Registration</h2>
+    <form>
+
+    <input 
+        type="text" 
+        id="firstname" 
+        required
+        placeholder="enter your Firstname" 
+        class="w-full mb-1 bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow"
+    />
+
+    <input 
+        type="text" 
+        id="lastname" 
+        required
+        placeholder="enter your Lastname" 
+        class="w-full mb-1 bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow"
+    />
+
+    <input 
+        type="email" 
+        id="emailadd" 
+        required
+        placeholder="enter your Email Address" 
+        class="w-full mb-1 bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow"
+    />
+
+    <input 
+        type="text" 
+        id="mobile" 
+        required
+        placeholder="enter your Mobile No." 
+        class="w-full mb-1 bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow"
+    />
+
+    <input 
+        type="text" 
+        id="username" 
+        required
+        placeholder="enter your username" 
+        class="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow"
+    />
+    <input 
+        type="password" 
+        id="password" 
+        required
+        placeholder="enter your password" 
+        class="w-full bg-transparent mt-1 placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow"
+    />
+    <button type="submit" class="bg-white mt-2 hover:bg-white-700 text-black font-semibold py-2 px-4 rounded-md transition-colors duration-200">
+     register
+    </button>
+    <button (click)="cancelRegistration($event)" type="button" formnovalidate  class="bg-sky-200 mx-1 mt-2  text-black font-semibold py-2 px-4 rounded-md transition-colors duration-200">
+     Cancel
+    </button>
+
+    </form>     
+  </div>
+</div>
